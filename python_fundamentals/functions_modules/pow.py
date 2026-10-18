@@ -11,4 +11,3 @@ def pow(a, b):
         return 1 / resultado
 
     return resultado
-
