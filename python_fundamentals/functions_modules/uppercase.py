@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def uppercase(str):
     resultado = ""
 
@@ -8,5 +9,5 @@ def uppercase(str):
             resultado += chr(ord(letra) - 32)
         else:
             resultado += letra
-    
-    print(resultado)
+
+    print("{}".format(resultado))
