@@ -12,4 +12,3 @@ def pow(a, b):
 
     return resultado
 
-
