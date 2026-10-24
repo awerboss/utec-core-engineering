@@ -6,5 +6,3 @@ def read_file(filename=""):
     """Lee un archivo de texto e imprime su contenido."""
     with open(filename, "r", encoding="utf-8") as archivo:
         print(archivo.read(), end="")
-
-
