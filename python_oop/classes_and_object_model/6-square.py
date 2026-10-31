@@ -1,13 +1,13 @@
 
 #!/usr/bin/env python3
-"""Define a square with size, position and string representation."""
+"""Module that defines a Square class with size and position."""
 
 
 class Square:
-    """Represent a square with a size and position."""
+    """Represent a square with a validated size and position."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize the square."""
+        """Initialize the square with size and position."""
         self.size = size
         self.position = position
 
@@ -33,13 +33,17 @@ class Square:
     @position.setter
     def position(self, value):
         """Validate and update the position."""
-        if (type(value) is not tuple or len(value) != 2
-                or type(value[0]) is not int
-                or type(value[1]) is not int
-                or value[0] < 0 or value[1] < 0):
+        if (
+            type(value) is not tuple
+            or len(value) != 2
+            or type(value[0]) is not int
+            or type(value[1]) is not int
+            or value[0] < 0
+            or value[1] < 0
+        ):
             raise TypeError(
-    "position must be a tuple of 2 positive integers"
-)
+                "position must be a tuple of 2 positive integers"
+            )
         self.__position = value
 
     def area(self):
@@ -47,18 +51,18 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Print the square using its position."""
+        """Print the square using the # character."""
         print(self)
 
     def __str__(self):
-        """Return the square as a formatted string."""
+        """Return the square as a string."""
         if self.__size == 0:
             return ""
 
         lines = [""] * self.__position[1]
 
         for _ in range(self.__size):
-            lines.append(" " * self.__position[0]
-                         + "#" * self.__size)
+            line = " " * self.__position[0] + "#" * self.__size
+            lines.append(line)
 
         return "\n".join(lines)
