@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Define a Rectangle class with area and perimeter methods."""
 
