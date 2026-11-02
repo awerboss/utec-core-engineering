@@ -9,5 +9,7 @@ class Square(SquareBase):
 
     def __str__(self):
         """Return the square description."""
-        return "[Square] {}/{}".format(self._SquareBase__size,
-                                       self._SquareBase__size)
+        return "[Square] {}/{}".format(
+            self._Square__size, self._Square__size
+        )
+
