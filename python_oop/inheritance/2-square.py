@@ -12,4 +12,3 @@ class Square(SquareBase):
         return "[Square] {}/{}".format(
             self._Square__size, self._Square__size
         )
-
